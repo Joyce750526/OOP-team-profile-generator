@@ -16,7 +16,7 @@ const teamArray = [];
 // start with Manager --> Engineer --> Intern
 
 // Manager
-function startApp() {
+function startManager() {
   inquirer
     .prompt([
       {
@@ -90,26 +90,21 @@ function startApp() {
       const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
       this.teamArray.push(newManager);
       console.log(manager);
-      startApp();
+      startManager();
     });
 };
 
 
 // Engineer
-const startApp = () => {
+const startEngineer = () => {
   console.log("Adding new employee!");
-};
-return inquirer.prompt([
-  {
-    type: "list",
-    name: "role",
-    message: "What is the role of the new employee?",
-    choices: ["Engineer", "Intern"]
-  }]),
-
-  const addEngineer = () => {
-  console.log("Adding a new Engineer!");
   return inquirer.prompt([
+    {
+      type: "list",
+      name: "role",
+      message: "What is the role of the new employee?",
+      choices: ["Engineer", "Intern"],
+    },
     {
       type: "input",
       name: "name",
@@ -123,7 +118,6 @@ return inquirer.prompt([
         }
       }
     },
-
     {
       type: "input",
       name: "id",
@@ -163,7 +157,6 @@ return inquirer.prompt([
         }
       }
     }
-
     // Pushes Engineer's data
   ]).then(response => {
     console.log(response);
@@ -172,7 +165,13 @@ return inquirer.prompt([
     startApp();
   });
 
-const addIntern = () => {
+};
+
+
+
+    
+  
+  const addIntern = () => {
     console.log("Adding new intern!");
   };
   return inquirer.prompt([
@@ -212,28 +211,28 @@ const addIntern = () => {
   }},
 
 
-  // function to generate HTML page file using file system 
+// function to generate HTML page file using file system 
 const writeFile = data => {
   fs.writeFile('./dist/index.html', data, err => {
-      // if there is an error 
-      if (err) {
-          console.log(err);
-          return;
+    // if there is an error 
+    if (err) {
+      console.log(err);
+      return;
       // when the profile has been created 
-      } else {
-          console.log("Your team profile has been successfully created! Please check out the index.html")
-      }
+    } else {
+      console.log("Your team profile has been successfully created! Please check out the index.html")
+    }
   })
-}; 
+};
 
 addManager()
-.then(addEmployee)
-.then(teamArray => {
-  return generateHTML(teamArray);
-})
-.then(pageHTML => {
-  return writeFile(pageHTML);
-})
-.catch(err => {
-console.log(err);
-});
+  .then(addEmployee)
+  .then(teamArray => {
+    return generateHTML(teamArray);
+  })
+  .then(pageHTML => {
+    return writeFile(pageHTML);
+  })
+  .catch(err => {
+    console.log(err);
+  });
