@@ -168,47 +168,44 @@ const startEngineer = () => {
 };
 
 
+const addIntern = () => {
+  console.log("Adding new intern!");
+};
+return inquirer.prompt([
+  {
+    type: "input",
+    name: "name",
+    message: "What is the name of the new intern?",
+    validate: (interName) => {
+      if (internName) {
+        return true;
+      } else {
+        console.log("Please enter the intern's name!");
+        return false;
+      }
+    }
+  },
 
-    
-  
-  const addIntern = () => {
-    console.log("Adding new intern!");
-  };
-  return inquirer.prompt([
-    {
-      type: "input",
-      name: "name",
-      message: "What is the name of the new intern?",
-      validate: (interName) => {
-        if (internName) {
-          return true;
-        } else {
-          console.log("Please enter the intern's name!");
-          return false;
-        }
+  {
+    type: "input",
+    name: "school",
+    message: "What is the intern's school?",
+    validate: (schoolInput) => {
+      if (schoolInput) {
+        return true;
+      } else {
+        console.log("Please enter the intern's school!");
+        return false;
       }
     },
-
-    {
-      type: "input",
-      name: "school",
-      message: "What is the intern's school?",
-      validate: (schoolInput) => {
-        if (schoolInput) {
-          return true;
-        } else {
-          console.log("Please enter the intern's school!");
-          return false;
-        }
-      },
-    }
-    // Pushes Intern's data
-  ]).then(response => {
-    const intern = new Intern(response.name, response.id, response.email, response.school);
-    this.teamArray.push(newIntern);
-    console.log(intern);
-    this.startApp();
-  }},
+  }
+  // Pushes Intern's data
+]).then(response => {
+  const intern = new Intern(response.name, response.id, response.email, response.school);
+  this.teamArray.push(newIntern);
+  console.log(intern);
+  this.startApp();
+})
 
 
 // function to generate HTML page file using file system 
