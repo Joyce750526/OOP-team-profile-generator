@@ -83,17 +83,34 @@ function startManager() {
     //     response.number
     //   );
     //   console.log(manager);
-    // });
+    // });  
 
     // Pushes Manager's data
     .then(response => {
-      const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
-      this.teamArray.push(newManager);
+      const manager = new Manager(response.name, response.id, response.email, response.Number);
+      teamArray.push(manager);
       console.log(manager);
-      startManager();
+      menuControls();
     });
 };
 
+const menuControls = () => {
+  inquirer.prompt([
+    {
+      type: "list",
+      name: "next",
+      message: "What would you like to do next?",
+      choices: ["Add an Engineer", "Add an Intern", "Quit"],
+    },
+  ])
+  .then(response => {
+    console.log = (response);
+    // if/else statement to control whay happens based on the user's answer to the questions above
+    // if they choose "add an engineer", then we want to call startEngineer()
+    // if they choose "add an intern", then we want to call startIntern)
+    // if they choose "quit", then we want to quit the application and write our HTML file
+  });
+}
 
 // Engineer
 const startEngineer = () => {
@@ -170,43 +187,43 @@ const startEngineer = () => {
 
 const addIntern = () => {
   console.log("Adding new intern!");
-};
-return inquirer.prompt([
-  {
-    type: "input",
-    name: "name",
-    message: "What is the name of the new intern?",
-    validate: (interName) => {
-      if (internName) {
-        return true;
-      } else {
-        console.log("Please enter the intern's name!");
-        return false;
-      }
-    }
-  },
 
-  {
-    type: "input",
-    name: "school",
-    message: "What is the intern's school?",
-    validate: (schoolInput) => {
-      if (schoolInput) {
-        return true;
-      } else {
-        console.log("Please enter the intern's school!");
-        return false;
+  return inquirer.prompt([
+    {
+      type: "input",
+      name: "name",
+      message: "What is the name of the new intern?",
+      validate: (interName) => {
+        if (internName) {
+          return true;
+        } else {
+          console.log("Please enter the intern's name!");
+          return false;
+        }
       }
     },
-  }
-  // Pushes Intern's data
-]).then(response => {
-  const intern = new Intern(response.name, response.id, response.email, response.school);
-  this.teamArray.push(newIntern);
-  console.log(intern);
-  this.startApp();
-})
 
+    {
+      type: "input",
+      name: "school",
+      message: "What is the intern's school?",
+      validate: (schoolInput) => {
+        if (schoolInput) {
+          return true;
+        } else {
+          console.log("Please enter the intern's school!");
+          return false;
+        }
+      },
+    }
+    // Pushes Intern's data
+  ]).then(response => {
+    const intern = new Intern(response.name, response.id, response.email, response.school);
+    this.teamArray.push(newIntern);
+    console.log(intern);
+    this.startApp();
+  })
+};
 
 // function to generate HTML page file using file system 
 const writeFile = data => {
@@ -222,7 +239,7 @@ const writeFile = data => {
   })
 };
 
-addManager()
+startManager()
   .then(addEmployee)
   .then(teamArray => {
     return generateHTML(teamArray);
@@ -233,3 +250,4 @@ addManager()
   .catch(err => {
     console.log(err);
   });
+startManager()
