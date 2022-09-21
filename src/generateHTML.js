@@ -4,8 +4,23 @@ function sortTeam(teamArray) {
   const managerArray = teamArray.filter(
     (employee) => employee.getRole() === "Manager"
   );
-
+  const engineerArray = teamArray.filter(
+    (employee) => employee.getRole() === "Engineer"
+  );
+  const internArray = teamArray.filter(
+    (employee) => employee.getRole() === "Intern"
+  );
+  if (managerArray) {
+    teamArray.push(managerHTML(managerArray));
+  }
   console.log(managerArray);
+  if (managerArray) {
+    teamArray.push(engineerHTML(engineerArray));
+  }
+  if (managerArray) {
+    teamArray.push(internHTML(internArray));
+  }
+  return teamArray.join("");
   // expected output: Array ["exuberant", "destruction", "present"]
   // with those arrays of just manager, just engineers, just interns,you wan to send those through their appropriate HTML function.
 }
@@ -22,15 +37,15 @@ function managerHTML(manager) {
 
 <div class="card-body">
         <p class="id">ID: ${manager.id}</p>
-        <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+        <p class="email">Email: <a href="mailto:${manager.email}">${
+    manager.email
+  }</a></p>
         <p class="office">Office Number: ${manager.officeNumber}</p>
 </div>
         </div>
     </div>
     `;
 }
-html.push(managerHTML);
-
 
 // Engineer Card
 function engineerHTML(engineer) {
@@ -43,15 +58,17 @@ function engineerHTML(engineer) {
             </div>
             <div class="card-body">
                 <p class="id">ID: ${engineer.id}</p>
-                <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-                <p class="github">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+                <p class="email">Email: <a href="mailto:${engineer.email}">${
+    engineer.email
+  }</a></p>
+                <p class="github">Github: <a href="https://github.com/${
+                  engineer.github
+                }">${engineer.github}</a></p>
             </div>
         </div>
     </div>
-    `
+    `;
 }
-html.push(engineerHTML);
-
 
 // Intern Card
 function internHTML(intern) {
@@ -64,16 +81,22 @@ function internHTML(intern) {
     </div>
     <div class="card-body">
         <p class="id">ID: ${intern.id}</p>
-        <p class="email">Email:<a href="mailto:${intern.email}">${intern.email}</a></p>
+        <p class="email">Email:<a href="mailto:${intern.email}">${
+    intern.email
+  }</a></p>
         <p class="school">School: ${intern.school}</p>
     </div>
 </div>
 </div>
-`
+`;
 }
-html.push(internHTML);
+// I'm not sure how to fix this code
+const teamArray = pageArray.join("");
+const generateTeam =generateHTML(teamArray);
+return generateTeam;
 
 
+// Generate HTML Page
 function generateHTML(teamArray) {
   return `<!DOCTYPE html>
 <html lang="en">

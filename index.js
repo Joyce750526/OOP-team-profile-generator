@@ -44,7 +44,7 @@ const startManager = () => {
             console.log("Please enter the correct number!");
             return false;
           }
-        },
+        }
       },
       {
         type: "input",
@@ -89,7 +89,7 @@ const startManager = () => {
 };
 // Quit App when the user chooses to quit
 const quitApp = () => {
-  console.log("quitApp");
+  // console.log("quitApp");
 };
 // This function is to prompt another question to ask them what they wish to do next!
 const menuControls = () => {
