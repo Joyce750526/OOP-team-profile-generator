@@ -87,10 +87,11 @@ const startManager = () => {
       menuControls();
     });
 };
+// Quit App when the user chooses to quit
 const quitApp = () => {
   console.log("quitApp");
 };
-
+// This function is to prompt another question to ask them what they wish to do next!
 const menuControls = () => {
   inquirer
     .prompt([
@@ -104,17 +105,20 @@ const menuControls = () => {
     .then((response) => {
       console.log = response;
       // if/else statement to control whay happens based on the user's answer to the questions above
+
+      // if they choose "add an engineer", then we want to call startEngineer()
       if (response.next === "Add an Engineer") {
         startEngineer();
+
+        // if they choose "add an intern", then we want to call startIntern()
       } else if (response.next === "Add an Intern") {
         startIntern();
       }
-      // if they choose "add an engineer", then we want to call startEngineer()
+
+      // if they choose "quit", then we want to quit the application and write our HTML file
       else {
         quitApp();
       }
-      // if they choose "add an intern", then we want to call startIntern)
-      // if they choose "quit", then we want to quit the application and write our HTML file
     });
 };
 
@@ -174,8 +178,9 @@ const startEngineer = () => {
           }
         },
       },
-      // Pushes Engineer's data
     ])
+
+    // Pushes Engineer's data
     .then((response) => {
       const engineer = new Engineer(
         response.name,
@@ -187,7 +192,8 @@ const startEngineer = () => {
       menuControls();
     });
 };
-// Start Intern
+
+// Intern
 const startIntern = () => {
   inquirer
     .prompt([
@@ -243,8 +249,9 @@ const startIntern = () => {
           }
         },
       },
-      // Pushes Intern's data
     ])
+
+     // Pushes Intern's data
     .then((response) => {
       const intern = new Intern(
         response.name,
@@ -273,15 +280,4 @@ const writeFile = (data) => {
   });
 };
 
-// startManager()
-//   .then(addEmployee)
-//   .then((teamArray) => {
-//     return generateHTML(teamArray);
-//   })
-//   .then((pageHTML) => {
-//     return writeFile(pageHTML);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
 startManager();
