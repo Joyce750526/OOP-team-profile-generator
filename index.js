@@ -44,7 +44,7 @@ const startManager = () => {
             console.log("Please enter the correct number!");
             return false;
           }
-        }
+        },
       },
       {
         type: "input",
@@ -86,11 +86,19 @@ const startManager = () => {
       console.log(manager);
       menuControls();
     });
-};
+}// Not sure how to write the correct coeds
 // Quit App when the user chooses to quit
 const quitApp = () => {
-  // console.log("quitApp");
+  // .then((answers) => {
+  //   const htmlPageContent = generateHTML(answers);
+
+  //   fs.writeFile('index.html', htmlPageContent, (err) =>
+  //     err ? console.log(err) : console.log('Successfully created index.html!')
+  //   );
+  // });
+  console.log(teamArray);
 };
+
 // This function is to prompt another question to ask them what they wish to do next!
 const menuControls = () => {
   inquirer
@@ -103,7 +111,7 @@ const menuControls = () => {
       },
     ])
     .then((response) => {
-      console.log = response;
+      console.log(response);
       // if/else statement to control whay happens based on the user's answer to the questions above
 
       // if they choose "add an engineer", then we want to call startEngineer()
@@ -251,7 +259,7 @@ const startIntern = () => {
       },
     ])
 
-     // Pushes Intern's data
+    // Pushes Intern's data
     .then((response) => {
       const intern = new Intern(
         response.name,

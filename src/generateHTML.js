@@ -90,10 +90,10 @@ function internHTML(intern) {
 </div>
 `;
 }
-// I'm not sure how to fix this code
-const teamArray = pageArray.join("");
-const generateTeam =generateHTML(teamArray);
-return generateTeam;
+// // I'm not sure how to fix this code
+// const teamArray = pageArray.join("");
+// const generateTeam =generateHTML(teamArray);
+// return generateTeam;
 
 
 // Generate HTML Page
