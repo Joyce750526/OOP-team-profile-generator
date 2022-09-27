@@ -86,19 +86,32 @@ const startManager = () => {
       console.log(manager);
       menuControls();
     });
-}// Not sure how to write the correct coeds
+}
+
+// Not sure how to write the correct cods
 // Quit App when the user chooses to quit
 const quitApp = () => {
-  // .then((answers) => {
-  //   const htmlPageContent = generateHTML(answers);
-
-  //   fs.writeFile('index.html', htmlPageContent, (err) =>
-  //     err ? console.log(err) : console.log('Successfully created index.html!')
-  //   );
-  // });
-  console.log(teamArray);
+  fs.writeFile('./dist/index.html', data, err => {
+    // if there is an error 
+    if (err) {
+      console.log(err);
+      return;
+      // when the profile has been created 
+    } else {
+      console.log('Successfully created index.html!')
+    }
+  })
 };
 
+// .then((answers) => {
+//   const htmlPageContent = generateHTML(answers);
+
+//   fs.writeFile('index.html', htmlPageContent, (err) =>
+//     err ? console.log(err) : console.log('Successfully created index.html!')
+//   );
+// });
+// console.log(teamArray);
+writeFile(teamArray)
 // This function is to prompt another question to ask them what they wish to do next!
 const menuControls = () => {
   inquirer
@@ -274,18 +287,19 @@ const startIntern = () => {
 
 // function to generate HTML page file using file system
 const writeFile = (data) => {
-  fs.writeFile("./dist/index.html", data, (err) => {
-    // if there is an error
-    if (err) {
-      console.log(err);
-      return;
-      // when the profile has been created
-    } else {
-      console.log(
-        "Your team profile has been successfully created! Please check out the index.html"
-      );
-    }
-  });
+  fs.writeFile("./dist/index.html", generateHTML(data), (err) => {
+    fs.writeFile("./dist/index.html", data, (err) => {
+      // if there is an error
+      if (err) {
+        console.log(err);
+        return;
+        // when the profile has been created
+      } else {
+        console.log(
+          "Your team profile has been successfully created! Please check out the index.html"
+        );
+      }
+    });
+  }
 };
-
-startManager();
+startManager()

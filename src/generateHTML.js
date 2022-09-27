@@ -1,5 +1,6 @@
 function sortTeam(teamArray) {
   // filter by employee type so that you have arrays of manager, engineer and intern
+  const htmlCardsArray =[];
 
   const managerArray = teamArray.filter(
     (employee) => employee.getRole() === "Manager"
@@ -20,7 +21,7 @@ function sortTeam(teamArray) {
   if (managerArray) {
     teamArray.push(internHTML(internArray));
   }
-  return teamArray.join("");
+  return htmlCardsArray.join("");
   // expected output: Array ["exuberant", "destruction", "present"]
   // with those arrays of just manager, just engineers, just interns,you wan to send those through their appropriate HTML function.
 }
@@ -95,7 +96,6 @@ function internHTML(intern) {
 // const generateTeam =generateHTML(teamArray);
 // return generateTeam;
 
-
 // Generate HTML Page
 function generateHTML(teamArray) {
   return `<!DOCTYPE html>
@@ -114,7 +114,7 @@ function generateHTML(teamArray) {
 <h1> My Team </h1>
 </header>
 
-<main> ${generateHTML(teamArray)} </main>
+<main> ${sortTeam(teamArray)} </main>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
