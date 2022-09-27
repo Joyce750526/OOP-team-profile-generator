@@ -1,7 +1,8 @@
 function sortTeam(teamArray) {
   // filter by employee type so that you have arrays of manager, engineer and intern
-  const htmlCardsArray =[];
+  const htmlCardsArray = [];
 
+  // Array of Employee by role type
   const managerArray = teamArray.filter(
     (employee) => employee.getRole() === "Manager"
   );
@@ -12,15 +13,29 @@ function sortTeam(teamArray) {
     (employee) => employee.getRole() === "Intern"
   );
   if (managerArray) {
-    teamArray.push(managerHTML(managerArray));
+    // If thers's manager's array, we need to take that array to split into each element
+
+    // pass a function to map
+    const managerCards = managerArray.map((manager) => managerHTML(manager));
+
+    // Each element needs to go to the  managerHtml function
+
+    // Push on to htmlCardsArray
+    htmlCardsArray.push(managerCards);
   }
-  console.log(managerArray);
-  if (managerArray) {
-    teamArray.push(engineerHTML(engineerArray));
+
+  if (engineerArray) {
+    const engineerCards = engineerArray.map((engineer) =>
+      engineerHTML(engineer)
+    );
+    htmlCardsArray.push(engineerCards);
   }
-  if (managerArray) {
-    teamArray.push(internHTML(internArray));
+
+  if (internArray) {
+    const internCards = internArray.map((intern) => internHTML(intern));
+    htmlCardsArray.push(internCards);
   }
+
   return htmlCardsArray.join("");
   // expected output: Array ["exuberant", "destruction", "present"]
   // with those arrays of just manager, just engineers, just interns,you wan to send those through their appropriate HTML function.
@@ -105,8 +120,11 @@ function generateHTML(teamArray) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="../dist/style.css" />
-  <title>Team Profile Generator</title>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">  
+<link rel="stylesheet" href="../dist/style.css" />
+<title>Team Profile Generator</title>
 </head>
 
 <body>

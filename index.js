@@ -91,16 +91,7 @@ const startManager = () => {
 // Not sure how to write the correct cods
 // Quit App when the user chooses to quit
 const quitApp = () => {
-  fs.writeFile('./dist/index.html', data, err => {
-    // if there is an error 
-    if (err) {
-      console.log(err);
-      return;
-      // when the profile has been created 
-    } else {
-      console.log('Successfully created index.html!')
-    }
-  })
+writeFile(teamArray)
 };
 
 // .then((answers) => {
@@ -111,7 +102,7 @@ const quitApp = () => {
 //   );
 // });
 // console.log(teamArray);
-writeFile(teamArray)
+// writeFile(teamArray)
 // This function is to prompt another question to ask them what they wish to do next!
 const menuControls = () => {
   inquirer
@@ -288,7 +279,6 @@ const startIntern = () => {
 // function to generate HTML page file using file system
 const writeFile = (data) => {
   fs.writeFile("./dist/index.html", generateHTML(data), (err) => {
-    fs.writeFile("./dist/index.html", data, (err) => {
       // if there is an error
       if (err) {
         console.log(err);
@@ -301,5 +291,4 @@ const writeFile = (data) => {
       }
     });
   }
-};
 startManager()
