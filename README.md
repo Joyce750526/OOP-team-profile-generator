@@ -1,32 +1,65 @@
 # OOP-team-profile-generator
 Object-Oriented Programming Challenge: Team Profile Generator
 
+## License:
+![License:MIT](https://img.shields.io/badge/License-MIT-green)
+![Heroku](https://img.shields.io/badge/Deploy%20to-Heroku-purple)
+![Express.js](https://img.shields.io/badge/Express.js-Backend-yellowgreen)
 
 
-## Acceptance Criteria
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for my team members and their information
-THEN an HTML file is generated that displays a nicely formatted team roster
- based on user input
-WHEN I click on an email address in the HTML
-THEN my default email program opens and populates the TO field of the email
- with the address
-WHEN I click on the GitHub username
-THEN that GitHub profile opens in a new tab
-WHEN I start the application
-THEN I am prompted to enter the team manager’s name, employee ID, email
- address, and office number
-WHEN I enter the team manager’s name, employee ID, email address, and office
- number
-THEN I am presented with a menu with the option to add an engineer or an
- intern or to finish building my team
-WHEN I select the engineer option
-THEN I am prompted to enter the engineer’s name, ID, email, and GitHub
- username, and I am taken back to the menu
-WHEN I select the intern option
-THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
- taken back to the menu
-WHEN I decide to finish building my team
-THEN I exit the application, and the HTML is generated
+---
+
+## Table of Contents:
+* [License](#license)
+* [Purpose](#purpose)
+* [Usage](#usage)
+* [Knowledge](#knowledge)
+* [Demo Video](#demo-video)
+* [Deployed URL](#deployed-url)
+* [Questions](#questions)
+---
+## Purpose: 
+### Apply express.js to create backend platform for user's to save notes.
+To create an application called `Tasksaver Note Taker` to be able to write and save notes for a small business owner to organize their business thoughts.
+
+---
+## Usage:
+This note taker application is designed to write and save notes for a small business. 
+How to use it- Clicking on top right-hand corner `+` to start typing your `Note Title` and then, typing your `Note Text` to in order to save your notes by clicking on top right-hand corner `Save Button` to save our notes.
+
+---
+## Knowledge: 
+* `JavaScript`
+* `Node.js`
+* `Express.js`
+* `node server` to get server URl
+* Installation: Run `npm install` to install the packages and dependencies.
+
+---
+## Demo Video: 
+![ReadMe Generator Walkthrough Video can be found here.](./public/video/Tasksaver-Walkthrough.gif)
+
+---
+
+## Required to submit the following URL for review:
+## Deployed URL:
+* Github URL:
+https://github.com/Joyce750526/tasksaver-note-taker
+
+* Github Deployed Page: 
+https://joyce750526.github.io/tasksaver-note-taker/
+
+* Heroku Deployed Page: 
+https://tasksaver-app.herokuapp.com/
+---
+
+## Questions:
+If you have any questions about this projects, please contact me!
+Email: [joyceideas@outlook.com](mailto:joyceideas@outlook.com)
+Github: [joyce750526](https://github.com/joyce750526)
+
+---
+Chao-Ying (Joyce) Chen
+
+
 ```

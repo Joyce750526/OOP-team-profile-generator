@@ -13,7 +13,7 @@ function sortTeam(teamArray) {
     (employee) => employee.getRole() === "Intern"
   );
   if (managerArray) {
-    // If thers's manager's array, we need to take that array to split into each element
+    // If there's manager's array, we need to take that array to split into each element
 
     // pass a function to map
     const managerCards = managerArray.map((manager) => managerHTML(manager));
