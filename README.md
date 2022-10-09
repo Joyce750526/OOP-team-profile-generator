@@ -15,6 +15,7 @@
 - [Usage](#usage)
 - [Knowledge](#knowledge)
 - [Demo Video](#demo-video)
+- [Demo Image](#demo-image)
 - [Deployed URL](#deployed-url)
 - [Questions](#questions)
 
@@ -44,9 +45,11 @@ How to use it- Run `node index.js` in the terminal to start choosing the team ro
 ---
 
 ## Demo Video:
+![Team Profile Generator Walkthrough Video can be found here.](./assets/video/Team-Profile-Generator-Walkthrough.gif)
 
-![Team Profile Generator Walkthrough Video can be found here.](./public/video/Tasksaver-Walkthrough.gif)
-
+---
+## Deployed Image: 
+![Team Profile Generator screenshot can be found here.](./assets/screenshots/team-profile-generator-screenshot.png)
 ---
 
 ## Deployed URL:
