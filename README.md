@@ -1,65 +1,73 @@
 # OOP-team-profile-generator
-Object-Oriented Programming Challenge: Team Profile Generator
 
 ## License:
-![License:MIT](https://img.shields.io/badge/License-MIT-green)
-![Heroku](https://img.shields.io/badge/Deploy%20to-Heroku-purple)
-![Express.js](https://img.shields.io/badge/Express.js-Backend-yellowgreen)
 
+![License:MIT](https://img.shields.io/badge/License-MIT-green)
+![Node.js](https://img.shields.io/badge/-Node.js-blue)
+![Inquirer package](https://img.shields.io/badge/-Inquirer%20package-red)
 
 ---
 
 ## Table of Contents:
-* [License](#license)
-* [Purpose](#purpose)
-* [Usage](#usage)
-* [Knowledge](#knowledge)
-* [Demo Video](#demo-video)
-* [Deployed URL](#deployed-url)
-* [Questions](#questions)
----
-## Purpose: 
-### Apply express.js to create backend platform for user's to save notes.
-To create an application called `Tasksaver Note Taker` to be able to write and save notes for a small business owner to organize their business thoughts.
+
+- [License](#license)
+- [Purpose](#purpose)
+- [Usage](#usage)
+- [Knowledge](#knowledge)
+- [Demo Video](#demo-video)
+- [Deployed URL](#deployed-url)
+- [Questions](#questions)
 
 ---
+
+## Purpose:
+
+A Node.js command-line `node index.js` application will help a business team to access their team members' information quickly.
+
+---
+
 ## Usage:
-This note taker application is designed to write and save notes for a small business. 
-How to use it- Clicking on top right-hand corner `+` to start typing your `Note Title` and then, typing your `Note Text` to in order to save your notes by clicking on top right-hand corner `Save Button` to save our notes.
 
----
-## Knowledge: 
-* `JavaScript`
-* `Node.js`
-* `Express.js`
-* `node server` to get server URl
-* Installation: Run `npm install` to install the packages and dependencies.
+To build a Node.js command-line `node index.js` application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries of the team's basic information for each person to help the company organization.
 
----
-## Demo Video: 
-![ReadMe Generator Walkthrough Video can be found here.](./public/video/Tasksaver-Walkthrough.gif)
+How to use it- Run `node index.js` in the terminal to start choosing the team role and entering their information to save the data. After creating all needed team members, the `generateHTML.js` will automatically create a HTML page from `index.html` for you.
 
 ---
 
-## Required to submit the following URL for review:
+## Knowledge:
+
+- `JavaScript`
+- `Node index.js`
+- `Express.js`
+- Installation: Run `npm install` to install the packages and dependencies.
+
+---
+
+## Demo Video:
+
+![Team Profile Generator Walkthrough Video can be found here.](./public/video/Tasksaver-Walkthrough.gif)
+
+---
+
 ## Deployed URL:
-* Github URL:
-https://github.com/Joyce750526/tasksaver-note-taker
 
-* Github Deployed Page: 
-https://joyce750526.github.io/tasksaver-note-taker/
+- Github URL:
+  https://github.com/Joyce750526/OOP-team-profile-generator
 
-* Heroku Deployed Page: 
-https://tasksaver-app.herokuapp.com/
+- Github Deployed Page:
+  https://joyce750526.github.io/OOP-team-profile-generator/
+
 ---
 
 ## Questions:
+
 If you have any questions about this projects, please contact me!
 Email: [joyceideas@outlook.com](mailto:joyceideas@outlook.com)
 Github: [joyce750526](https://github.com/joyce750526)
 
 ---
+
 Chao-Ying (Joyce) Chen
 
 
-```
+

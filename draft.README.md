@@ -143,7 +143,7 @@ This Challenge is graded based on the following criteria:
 
 ### Walkthrough Video: 32%
 
-* A walkthrough video that demonstrates the functionality of the Team Profile Generator and passing tests must be submitted, and a link to the video should be included in your README file.
+* A walkthrough video that demonstrates the functionality of the Team Profile Generator and passing tests must be submitted, and a link to the video should be included in your REA DME file.
 
 * The walkthrough video must show all four tests passing from the command line.
 
