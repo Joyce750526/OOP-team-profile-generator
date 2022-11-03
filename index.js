@@ -278,6 +278,8 @@ const startIntern = () => {
 
 // function to generate HTML page file using file system
 const writeFile = (data) => {
+  // TO DO: check if the dist directory exists
+  // Create dist directory if not exists
   fs.writeFile("./dist/index.html", generateHTML(data), (err) => {
       // if there is an error
       if (err) {
