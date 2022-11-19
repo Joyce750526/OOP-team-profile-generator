@@ -47,7 +47,6 @@ How to use it- Run `node index.js` in the terminal to start choosing the team ro
 ## Demo Video:
 [Team Profile Generator Walkthrough Video](https://youtu.be/AatsHT8jUro).
 
-
 ---
 ## Deployed Image: 
 ![Team Profile Generator screenshot can be found here.](./Assets/screenshots/team-profile-generator-screenshot.png)
