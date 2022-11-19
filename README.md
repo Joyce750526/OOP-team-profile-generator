@@ -45,32 +45,31 @@ How to use it- Run `node index.js` in the terminal to start choosing the team ro
 ---
 
 ## Demo Video:
-[Team Profile Generator Walkthrough Video](https://youtu.be/AatsHT8jUro).
+
+[Team Profile Generator Walkthrough Video](https://youtu.be/AatsHT8jUro)
 
 ---
-## Deployed Image: 
-![Team Profile Generator screenshot can be found here.](./Assets/screenshots/team-profile-generator-screenshot.png)
+
+## Deployed Image:
+
+## ![Team Profile Generator screenshot can be found here.](./Assets/screenshots/team-profile-generator-screenshot.png)
 ---
 
 ## Deployed URL:
 
-- Github URL:
-  https://github.com/Joyce750526/OOP-team-profile-generator
+- [Github URL](https://github.com/Joyce750526/OOP-team-profile-generator)
 
-- Github Deployed Page:
-  https://joyce750526.github.io/OOP-team-profile-generator/
+- [Github Deployed Page](https://joyce750526.github.io/OOP-team-profile-generator/)
 
 ---
 
 ## Questions:
 
 If you have any questions about this projects, please contact me!
-Email: [joyceideas@outlook.com](mailto:joyceideas@outlook.com)
-Github: [joyce750526](https://github.com/joyce750526)
+
+- [Email Me](mailto:joyceideas@outlook.com)
+- [Github](https://github.com/joyce750526)
 
 ---
 
-Chao-Ying (Joyce) Chen
-
-
-
+<p align="center"> Chao-Ying(Joyce) Chen
