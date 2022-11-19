@@ -44,69 +44,65 @@ function sortTeam(teamArray) {
 // Manager Card
 function managerHTML(manager) {
   return `
-  <div class="col-4 mt-4">
-        <div class="card h-100">
-            <div class="card-header">
-<h1>${manager.getName()}<h1>
-<h4>Manager</h4><i class="bi bi-cup-hot-fill">Hot Tea Icon</i>
+<div class="col-6 col-md-4" "align-self-center">
+<div class="card h-100">
+
+<div class="card-header">
+   <h2>${manager.getName()}<h2>
+   <h4>Manager</h4><i class="bi bi-cup-hot-fill"></i>
 </div>
 
-<div class="card-body">
-        <p class="id">ID: ${manager.id}</p>
-        <p class="email">Email: <a href="mailto:${manager.email}">${
-    manager.email
-  }</a></p>
-        <p class="office">Office Number: ${manager.officeNumber}</p>
+<div class="card-body" style="width: 18rem">
+   <p class="id">ID: ${manager.id}</p>
+   <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+   <p class="office">Office Number: ${manager.officeNumber}</p>
 </div>
-        </div>
-    </div>
+</div>
+</div>
     `;
 }
 
 // Engineer Card
 function engineerHTML(engineer) {
   return `
-  <div class="col-4 mt-4">
-  <div class="card h-100">
-      <div class="card-header">
-    <h1>${engineer.getName()}<h1>
-    <h4>Engineer</h4><i class="bi bi-file-code-fill">Code Icon</i>
-            </div>
-            <div class="card-body">
-                <p class="id">ID: ${engineer.id}</p>
-                <p class="email">Email: <a href="mailto:${engineer.email}">${
-    engineer.email
-  }</a></p>
-                <p class="github">Github: <a href="https://github.com/${
-                  engineer.github
-                }">${engineer.github}</a></p>
-            </div>
-        </div>
-    </div>
+<div class="col-6 col-md-4" "align-self-center">
+<div class="card h-100">
+
+<div class="card-header">
+   <h2>${engineer.getName()}<h2>
+   <h4>Engineer</h4><i class="bi bi-file-code-fill"></i>
+</div>
+            
+<div class="card-body">
+  <p class="id">ID: ${engineer.id}</p>
+  <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+  <p class="github">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+</div>
+</div>
+</div>
     `;
 }
 
 // Intern Card
 function internHTML(intern) {
   return `
-  <div class="col-4 mt-4">
-        <div class="card h-100">
-            <div class="card-header">
-    <h1>${intern.getName()}
-    <h4>Intern</h4><i class="bi bi-mortarboard-fill">Hat Icon</i>
-    </div>
-    <div class="card-body">
-        <p class="id">ID: ${intern.id}</p>
-        <p class="email">Email:<a href="mailto:${intern.email}">${
-    intern.email
-  }</a></p>
-        <p class="school">School: ${intern.school}</p>
-    </div>
+<div class="col-6 col-md-4" "align-self-center">
+<div class="card h-100">
+<div class="card-header">
+  <h2>${intern.getName()}</h2>
+  <h4>Intern</h4><i class="bi bi-mortarboard-fill"></i>
+</div>
+
+<div class="card-body">
+  <p class="id">ID: ${intern.id}</p>
+  <p class="email">Email:<a href="mailto:${intern.email}">${intern.email}</a></p>
+  <p class="school">School: ${intern.school}</p>
+</div>
 </div>
 </div>
 `;
 }
-// // I'm not sure how to fix this code
+
 // const teamArray = pageArray.join("");
 // const generateTeam =generateHTML(teamArray);
 // return generateTeam;
@@ -139,7 +135,6 @@ function generateHTML(teamArray) {
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-<footer>Team Profile Generator Created by Joyce Chen ®</footer></html>
 `;
 }
 
